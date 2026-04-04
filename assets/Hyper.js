@@ -20,12 +20,12 @@ document.addEventListener("keydown", function(event) {
     event.preventDefault();
   }
   if (event.key === "Escape") {
-  window.open("", "_self");
+  window.open("https://david66775.github.io/", "_self");
   window.close();
   }
   });
   function closepage() {
-    window.open("", "_self");
+    window.open("https://david66775.github.io/", "_self");
     window.close();
   }
   function No() {
