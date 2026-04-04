@@ -1,4 +1,4 @@
-const nointerval = window.setInterval(No, 30);
+const nointerval = window.setInterval(no, 30);
 document.addEventListener("keydown", function(event) {
   const key = event.key.toLowerCase();
   if (event.ctrlKey && key === "u") {
@@ -28,7 +28,7 @@ document.addEventListener("keydown", function(event) {
     window.open("https://david66775.github.io/Blank", "_self");
     window.close();
   }
-  function No() {
+  function no() {
     if(window.outerWidth > window.innerWidth) {
       closepage();
     }
