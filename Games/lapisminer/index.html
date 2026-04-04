@@ -382,13 +382,13 @@ window.addEventListener('contextmenu', (event) => {
       
       
       let clickvalue = 1;
-      
+      if (gameplayed === false) {
+      localStorage.setItem("gameplayed", true);
+      }
       if (gameplayed === true) {
       clickvalue = localStorage.getItem("clickvalue");
       currency = localStorage.getItem("currency");   //  <--if you even know the way in here, you earned it. go ahead.
       }
-      
-      localStorage.setItem("gameplayed", true);
       let leftdiv = document.getElementById("left");
       let FutureTechPurchased = false;
       let JSunlocked = false;
@@ -449,7 +449,14 @@ window.addEventListener('contextmenu', (event) => {
       });
 const audio = new Audio('/Team-Projects/assets/mondamusic-retro-arcade-game-music-491667.mp3');
 audio.loop = true;
+document.addEventListener('keydown', function(e) {
+if (e.key === "p" || e.key === "P") {
 audio.play();
+}
+if (key === " ") {
+  currency += clickvalue;
+}
+});
       function grant(item) {
         if (item === "Young Miner") {
           youngminers++;
@@ -663,7 +670,6 @@ audio.play();
         }
         
       }
-      
       function CentralGameLoopCallback() {
         currency += (youngminers * 5);
         currency += (miners * 150);
