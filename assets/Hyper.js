@@ -29,7 +29,7 @@ document.addEventListener("keydown", function(event) {
     window.close();
   }
   function No() {
-    if(document.documentElement.clientWidth < window.innerwidth) {
+    if(window.outerWidth > window.innerWidth) {
       closepage();
     }
   }
