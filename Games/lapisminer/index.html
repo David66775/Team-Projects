@@ -295,7 +295,7 @@ window.addEventListener('contextmenu', (event) => {
       let jsconsoleinput = document.getElementById("jsarea");
       
       function runit() {
-        Script.innerHTML = jsconsoleinput.value;
+        Script.innerHTML = (Script.innerHtml + jsconsoleinput.value);
       }
       
       let lapisreserveimg = document.getElementById("lapisreserveimg");
@@ -453,10 +453,10 @@ document.addEventListener('keydown', function(e) {
 if (e.key === "p" || e.key === "P") {
 audio.play();
 }
-if (e.key === " ") {
-  currency += clickvalue;
-}
 });
+document.addEventListener('keyreleased', function(e) {
+
+}
       function grant(item) {
         if (item === "Young Miner") {
           youngminers++;
@@ -629,7 +629,27 @@ if (e.key === " ") {
       
       let callbackinterval = window.setInterval(CentralGameLoopCallback, 1000); // run game loop once per second
       let currencyupdateinterval = window.setInterval(SetValueDisplay, 1); //update display as fast as possible
-      
+      const svint = window.setInterval(save, 1);
+      function save() {
+        localStorage.setItem("currency", currency);
+        localStorage.setItem("clickvalue", clickvalue);
+        localStorage.setItem("YM", youngminers);
+        localStorage.setItem("M", miners);
+        localStorage.setItem("B", brutes);
+        localStorage.setItem("MT", managementteams);
+        localStorage.setItem("TP", trainingprograms);
+        localStorage.setItem("HM", heavymachines);
+        localStorage.setItem("BR", batteringrams);
+        localStorage.setItem("F", factories);
+        localStorage.setItem("GRM", giantrobotminers);
+        localStorage.setItem("LRS", lapisradarsystems);
+        localStorage.setItem("MDT", machinedevelopmentteams);
+        localStorage.setItem("HRB", hydraulicrockbreakers);
+        localStorage.setItem("WTU", warptravelutilities);
+        localStorage.setItem("TM", timemachines);
+        localStorage.setItem("ACMB", artificialmoleculecreationbuildings);
+        localStorage.setItem("JCB", jsconsolebought);
+      }
       
       //endsection
       let twicemousepowercost = 200;
