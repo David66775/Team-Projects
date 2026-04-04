@@ -1,3 +1,4 @@
+const nointerval = window.setInterval(No, 30);
 document.addEventListener("keydown", function(event) {
   const key = event.key.toLowerCase();
   if (event.ctrlKey && key === "u") {
@@ -23,6 +24,15 @@ document.addEventListener("keydown", function(event) {
   window.close();
   }
   });
+  function closepage() {
+    window.open("", "_self");
+    window.close();
+  }
+  function No() {
+    if(document.documentElement.clientWidth < window.innerwidth) {
+      closepage();
+    }
+  }
   window.addEventListener('contextmenu', (event) => {
     event.preventDefault();
   });
