@@ -1,1 +1,767 @@
-const audio = new Audio('/Team-Projects/assets/'); audio.loop = true; audio.play();
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "Utf-8">
+    <title>Lapis Miner</title>
+    <style>
+      #divmain {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+      }
+      #left {
+        width: 33%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+      }
+      #mid {
+        width: 33%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 11%;
+        margin-right: 11%;
+      }
+      #right {
+        width: 33%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        text-align: right;
+      }
+      #clicky {
+        width: 260px;
+        height: 180px;
+        border: solid grey 1px;
+        background-color: white;
+      }
+      #bgimgc {
+        width: 250px;
+        height: 175px;
+      }
+      #menus {
+        display: none;
+        max-width: 150px;
+        background-color: grey;
+      }
+      #menusopener {
+        text-align: center;
+        border: inset rgb(230, 230, 230) 3px;
+        border-radius: 5px;
+        width: 150px;
+        height: 75px;
+        background-image: url("https://cdn.pixabay.com/photo/2017/02/07/09/02/wood-2045380_1280.jpg");
+        background-size: auto;
+        background-repeat: no-repeat;
+      }
+      #menusopener button {
+        width: 100%;
+      }
+      #m-op-header {
+        color: white;
+      }
+      #menuworks  {
+        display: none;
+      }
+      
+      #nstats  {
+        display: none;
+      }
+      
+      #basics  {
+        display: none;
+      }
+      #rightmain {
+        display: flex;
+        flex-direction: row;
+      }
+      #leftright {
+        text-align: left;
+        display: flex;
+        flex-direction: column;
+      }
+      #rightright {
+        text-align: right;
+        display: flex;
+        flex-direction: column;
+      }
+      #1 {
+        display: none;
+      }
+      #2 {
+        display: none;
+      }
+      #3 {
+        display: none;
+      }
+      #4 {
+        display: none;
+      }
+      #5 {
+        display: none;
+      }
+      #6 {
+        display: none;
+      }
+      #7 {
+        display: none;
+      }
+      #8 {
+        display: none;
+      }
+      #9 {
+        display: none;
+      }
+      #10 {
+        display: none;
+      }
+      #11 {
+        display: none;
+      }
+      #12 {
+        display: none;
+      }
+      #13 {
+        display: none;
+      }
+      #14 {
+        display: none;
+      }
+      #15 {
+        display: none;
+      }
+      #secretachieves {
+        display: none;
+      }
+      #hide {
+        display: none;
+      }
+      #lapisreserveimg {
+        z-index: 10000;
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id = "divmain">
+      <img id = "lapisreserveimg" src = "https://cdn.pixabay.com/photo/2020/04/24/13/18/lapis-lazuli-5086836_1280.jpg" width = "80" height = "80">
+      <div id = "left">
+        <h2 id = "cdisplay">No Lapis Lazuli Stones</h2>
+        <button id = "clicky"><img id = "bgimgc" src = "https://cdn.pixabay.com/photo/2020/04/24/13/18/lapis-lazuli-5086836_1280.jpg"></button>
+      </div>
+      <div id = "mid">
+        <div id = "menusopener"><h3 id = "m-op-header">menus</h3></div>
+        <div id = "menus">
+          <button id = "basicsopener">Basics</button>
+          <button id = "nstatsopener">Stats For Nerds</button>
+        </div>
+        <div id = "basics">
+          <h1>Basics</h1>
+          
+          
+          
+          
+          
+          <h2>Costs list</h2>
+          !!!!!spoiler alert!!!!!
+          If you don't want spoilers on what automatic mining tools/workers you can unlock, don't look at this.
+          <details>
+            <summary>open anyway</summary>
+            <ul>
+              <li>100, Young Miner</li>
+              <li>15000, Miner</li>
+              <li>300000, Brute</li>
+              <li>6000000, Management Team</li>
+              <li>7500000000, Training Program</li>
+              <li>19300000000, Heavy Machine</li>
+              <li>245360000000, Battering Ram</li>
+              <li>9750400000000, Factory</li>
+              <li>23469950000000, Giant Robot Miner</li>
+              <li>40000000000000, Lapis Radar System</li>
+              <li>60000000000000, Machine Development Team</li>
+              <li>86500945000000,"Hydraulic Rock Breaker</li>
+              <li>99999999999900, Futuristic Technology</li>
+              <li>234009500000000, Warp Travel Port</li>
+              <li>4680190000000000, Time Machine</li>
+              <li>1965078409500000, Artificial Molecule Creation Building</li>
+              <li>9007199254740991, Javascript Console</li>
+            </ul>
+          </details>
+          <div id = "secretachieves">
+            <h2 id = "secretheader">Secret and Shadow achivements</h2>
+            <p>
+              secret achievment: luck demon. it is about only ten times rarer to win the grand prize in the lottery than to get this achievment. odds? 1 in 30 million.<br>
+              Good job getting this. you achieved virtually the best of luck available in this game.<br>
+              <span id = "hide">
+              secret achievment: luck demon 2: it is about a million times rarer to get this achievment than winning the grand prize in the lottery. odds? 1 in 300 trillion.<br>
+              if nine billion people tried to get this, the odds of even just one of them getting this would be 1 in 33,359. Big congrats to you.<br><!--Do not leak this out please-->
+              </span>
+            </p>
+          </div>
+        </div>
+        <div id = "nstats">
+          <h1>Stats For Nerds</h1>
+          <h2>Numbers</h2>
+          
+          <h3>Coming soon!!!</h3>
+          
+          
+          
+          
+          <h2>Fun Facts</h2>
+          <ul>
+            <li>Made by an 11 year old.</li>
+            <li>No AI or tools of any form were used.</li>
+            <li>made in raw htm, css, and js.</li>
+            <li>no servers, or any method of saving other than localstorage.</li>
+          </ul>
+        </div>
+      </div>
+      <div id = "right">
+        <h2 id = "c-ugd-header">Upgrades</h2>
+        <div id = "rightmain">
+          <div id = "leftright">
+            <h3>efficiency and mouse- -</h3>
+            <button onclick = "doublemousepower()" id = "doublemouse">Double Mouse Power</button>
+            <button onclick = 'buy(9000965078645000, "JSunlock")'>Js Unlock</button>
+          </div>
+          <div id = "rightright">
+            <h3>automatic mining</h3>
+            <button onclick = 'buy(100, "Young Miner")' id = "0">Young Miner</button>
+            <button id = "1" onclick = 'buy(15000, "Miner")'></button>
+            <button id = "2" onclick = 'buy(300000, "Brute")'></button>
+            <button id = "3" onclick = 'buy(6000000, "Management Team")'></button>
+            <button id = "4" onclick = 'buy(7500000000, "Training Program")'></button>
+            <button id = "5" onclick = 'buy(19300000000, "Heavy Machine")'></button>
+            <button id = "6" onclick = 'buy(245360000000, "Battering Ram")'></button>
+            <button id = "7" onclick = 'buy(9750400000000, "Factory")'></button>
+            <button id = "8" onclick = 'buy(23469950000000, "Giant Robot Miner")'></button>
+            <button id = "9" onclick = 'buy(40000000000000, "Lapis Radar System")'></button>
+            <button id = "10" onclick = 'buy(60000000000000, "Machine Development Team")'></button>
+            <button id = "11" onclick = 'buy(86500945000000, "Hydraulic Rock Breaker")'></button>
+            <button id = "12" onclick = 'buy(99999999999900, "Futuristic Technology")'></button>
+            <button id = "13" onclick = 'buy(234009500000000, "Warp Travel Port")'></button>
+            <button id = "14" onclick = 'buy(4680190000000000, "Time Machine")'></button>
+            <button id = "15" onclick = 'buy(1965078409500000, "Artificial Molecule Creation Building")'></button>
+            <button id = "16" onclick = 'buy(9007199254740991, "Javascript Console")'></button>
+          </div>
+        </div>
+      </div>
+      <div id = "jsconsole">
+        <textarea id = "jsarea">Enter js here</textarea>
+        <button id = "jsrunbutton" onclick = "runit();">Run Js</button>
+      </div>
+    </div>
+    <script id = "thescript">
+      document.addEventListener("keydown", function(event) {
+  const key = event.key.toLowerCase();
+  if (event.ctrlKey && key === "u") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && key === "i") {
+    event.preventDefault();
+  }
+  if (key === "f12") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && key === "j") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && key === "c") {
+    event.preventDefault();
+  }
+  if (event.ctrlKey && event.shiftKey && key === "m") {
+    event.preventDefault();
+  }
+});
+window.addEventListener('contextmenu', (event) => {
+  event.preventDefault();
+});
+      
+      
+      let Script = document.getElementById("thescript");
+      
+      function jsportopen() {
+        jsconsolebought = true;
+        jsconsole.style = "display: block;";
+      }
+      
+      let jsconsole = document.getElementById("jsconsole");
+      jsconsole.style = "display: none;";
+      let jsconsoleinput = document.getElementById("jsarea");
+      
+      function runit() {
+        Script.innerHTML = jsconsoleinput.value;
+      }
+      
+      let lapisreserveimg = document.getElementById("lapisreserveimg");
+      
+       
+      
+      let youngminerscost = 100;
+      let minerscost = 15000;
+      let brutescost = 300000;
+      let managementteamscost = 6000000;
+      let trainingprogramscost = 7500000000;
+      let heavymachinescost = 193000000000;
+      let batteringramscost = 2453600000000;
+      let factoriescost = 9750400000000;
+      let giantrobotminerscost = 23469950000000;
+      let lapisradarsystemscost = 40000000000000;
+      let machinedevelopmentteamscost = 60000000000000;
+      let hydraulicrockbreakerscost = 86500945000000;
+      let warptravelutilitiescost = 99999999999900;
+      let timemachinescost = 4680190000000000;
+      let artificialmoleculecreationbuildingscost = 196507840950000;
+      
+      let youngminersbutton = document.getElementById("0");
+      let minersbutton = document.getElementById("1");
+      let brutesbutton = document.getElementById("2");
+      let managementteamsbutton = document.getElementById("3");
+      let trainingprogramsbutton = document.getElementById("4");
+      let heavymachinesbutton = document.getElementById("5");
+      let batteringramsbutton = document.getElementById("6");
+      let factoriesbutton = document.getElementById("7");
+      let giantrobotminersbutton = document.getElementById("8");
+      let lapisradarsystemsbutton = document.getElementById("9");
+      let machinedevelopmentteamsbutton = document.getElementById("10");
+      let hydraulicrockbreakersbutton = document.getElementById("11");
+      let futuretechbutton = document.getElementById("12");
+      let warptravelutilitiesbutton = document.getElementById("13");
+      let timemachinesbutton = document.getElementById("14");
+      let artificialmoleculecreationbuildingsbutton = document.getElementById("15");
+      let jsconsolebutton = document.getElementById("16");
+      
+      let gameplayed = localStorage.getItem("gameplayed");
+      
+      let youngminers = 0;
+      let miners = 0;
+      let brutes = 0;
+      let managementteams = 0;
+      let trainingprograms = 0;
+      let heavymachines = 0;
+      let batteringrams = 0;
+      let factories = 0;
+      let giantrobotminers = 0;
+      let lapisradarsystems = 0;
+      let machinedevelopmentteams = 0;
+      let hydraulicrockbreakers = 0;
+      let warptravelutilities = 0;
+      let timemachines = 0;
+      let artificialmoleculecreationbuildings = 0;
+      let jsconsolebought = false;
+      
+      if (gameplayed === true) {
+         youngminers = localStorage.getItem("YM");
+         miners = localStorage.getItem("M");
+         brutes = localStorage.getItem("B");
+         managementteams = localStorage.getItem("MT");
+         trainingprograms = localStorage.getItem("TP");
+         heavymachines = localStorage.getItem("HM");
+         batteringrams = localStorage.getItem("BR");
+         factories = localStorage.getItem("F");
+         giantrobotminers = localStorage.getItem("GRM");
+         lapisradarsystems = localStorage.getItem("LRS");
+         machinedevelopmentteams = localStorage.getItem("MDT");
+         hydraulicrockbreakers = localStorage.getItem("HRB");
+         warptravelutilities = localStorage.getItem("WTU");
+         timemachines = localStorage.getItem("TM");
+         artificialmoleculecreationbuildings = localStorage.getItem("AMCB");
+         jsconsolebought = localStorage.getItem("JCB");
+        if (jsconsolebought) {
+          jsportopen();
+        }
+      }
+      
+      let currency = 0; 
+      
+        
+      
+      
+      let clickvalue = 1;
+      
+      if (gameplayed === true) {
+      clickvalue = localStorage.getItem("clickvalue");
+      currency = localStorage.getItem("currency");   //  <--if you even know the way in here, you earned it. go ahead.
+      }
+      
+      localStorage.setItem("gameplayed", true);
+      let leftdiv = document.getElementById("left");
+      let FutureTechPurchased = false;
+      let JSunlocked = false;
+      let nstats = document.getElementById("nstats");
+      let basics = document.getElementById("basics");
+      let bopener = document.getElementById("basicsopener");
+      let nopener = document.getElementById("nstatsopener");
+      let menusdiv = document.getElementById("menusopener");
+      let menusdisplaydiv = document.getElementById("menus");
+      function anms1() {
+        bgimg.style = "margin-bottom: 8px;";
+        setTimeout(anms2, 100);
+      }
+      function anms2() {
+        bgimg.style = "margin-bottom: 16px;";
+        setTimeout(anms3, 200);
+      }
+      function anms3() {
+        bgimg.style = "margin-bottom: 12px;";
+        setTimeout(anms4, 50);
+      }
+      function anms4() {
+        bgimg.style = "margin-bottom: 4px;";
+      }
+      let bgimg = document.getElementById("bgimgc");
+      let currencydisplay = document.getElementById("cdisplay");
+      let clicker = document.getElementById("clicky");
+      clicker.addEventListener('click', function() {
+        currency += clickvalue;
+        if (currency !== 1) {
+          currencydisplay.innerHTML = `${currency} Lapis Lazuli Stones`;
+        }
+        else {
+          currencydisplay.innerHTML = `1 Lapis Lazuli Stone`;
+        }
+        bgimg.style = "margin-top: 1px;";
+        setTimeout(anms1, 400);
+      });
+      menusdiv.addEventListener("mouseover", function() {
+        menusdisplaydiv.style = "display: block;";
+      });
+      menusdiv.addEventListener("mouseout", function() {
+        menusdisplaydiv.addEventListener("mouseout", function() {
+          menusdisplaydiv.style = "display: flex; flex-direction: column;";
+        });
+      });
+      nopener.addEventListener('click', function() {
+        nstats.style = "display: block;";
+        basics.style = "display: none;";
+      });
+      bopener.addEventListener('click', function() {
+        basics.style = "display: block;";
+        nstats.style = "display: none;";
+      });
+      leftdiv.addEventListener('mouseover', function() {
+        nstats.style = "display: none;";
+        basics.style = "display: none;";
+      });
+const audio = new Audio('/Team-Projects/assets/mondamusic-retro-arcade-game-music-491667.mp3');
+audio.loop = true;
+audio.play();
+      function grant(item) {
+        if (item === "Young Miner") {
+          youngminers++;
+          youngminerscost = youngminerscost * 1.5;
+          youngminersbutton.setAttribute("onclick", `buy(${youngminerscost}, "Young Miner")`);
+        }
+        else if (item === "Miner") {
+          miners++;
+          minerscost = minerscost * 1.5;
+          minersbutton.setAttribute("onclick", `buy(${minerscost}, "Miner")`);
+        }
+        else if (item === "Brute") {
+          brutes++;
+          brutescost = brutescost * 1.5;
+          brutesbutton.setAttribute("onclick", `buy(${brutescost}, "Brute")`);
+        }
+        else if (item === "Management Team") {
+          managementteams++;
+          managementteamscost = managementteamscost * 1.5;
+          managementteamsbutton.setAttribute("onclick", `buy(${managementteamscost}, "Management Team")`);
+        }
+        else if (item === "Training Program") {
+          trainingprograms++;
+          trainingprogramscost = trainingprogramscost * 1.5;
+          trainingprogramsbutton.setAttribute("onclick", `buy(${trainingprogramscost}, "Training Program")`);
+        }
+        else if (item === "Heavy Machine") {
+          heavymachines++;
+          heaymachinescost = heavymachinescost * 1.5;
+          heavymachinesbutton.setAttribute("onclick", `buy(${heavymachinescost}, "Heavy Machine")`);
+        }
+        else if (item === "Battering Ram") {
+          batteringrams++;
+          batteringramscost = batteringramscost * 1.5;
+          batteringramsbutton.setAttribute("onclick", `buy(${batteringramscost}, "Battering Ram")`);
+        }
+        else if (item === "Factory") {
+          factories++;
+          factoriescost = factoriescost * 1.5;
+          factoriesbutton.setAttribute("onclick", `buy(${factoriescost}, "Factory")`);
+        }
+        else if (item === "Giant Robot Miner") {
+          giantrobotminers++;
+          giantrobotminerscost = giantrobotminerscost * 1.5;
+          giantrobotminersbutton.setAttribute("onclick", `buy(${giantrobotminerscost}, "Giant Robot Miner")`);
+        }
+        else if (item === "Lapis Radar System") {
+          lapisradarsystems++;
+          lapisradarsystemscost = lapisradarsystemscost * 1.5;
+          lapisradarsystemsbutton.setAttribute("onclick", `buy(${lapisradarsystemscost}, "Lapis Radar System")`);
+        }
+        else if (item === "Machine Development Team") {
+          machinedevelopmentteams++;
+          machinedevelopmentteamscost = machinedevelopmentteamscost * 1.5;
+          machinedevelopmentteamsbutton.setAttribute("onclick", `buy(${machinedevelopmentteamscost}, "Machine Development Team")`);
+        }
+        else if (item === "Hydraulic Rock Breaker") {
+          hydraulicrockbreakers++;
+          hydraulicrockbreakerscost = hydraulicrockbreakerscost * 1.5;
+          hydraulicrockbreakersbutton.setAttribute("onclick", `buy(${hydraulicrockbreakerscost}, "Hydraulic Rock Breaker")`);
+        }
+        else if (item === "Futuristic Technology") {
+          FutureTechPurchased = true;
+          alert("buying this again is will just be a waste of money, as this is a purchase that triggers the ability to use the 2nd, 3rd, and 4th to last automatic mining tools, buy this again will do nothing.");
+        }
+        else if (FutureTechPurchased) {
+          if (item === "Warp Travel Port") {
+            warptravelutilities++;
+            warptravelutilitiescost = warptavelutilitiescost * 1.5;
+            warptravelutilitiesbutton.setAttribute("onclick", `buy(${warptravelutilitescost}, "Warp Travel Ports)"`);
+          }
+        else if (item === "Time Machine") {
+            timemacines++;
+            timemachinescost = timemachinescost * 1.5;
+            timemachinessbutton.setAttribute("onclick", `buy(${timemachinescost}, "Time Machine")`);
+          }
+       else if (item === "Artificial Molecule Creation Building") {
+            artificialmoleculecreationbuildings++;
+            clickvalue += 300000000000000;
+            artificialmoleculecreationbuildingscost = artificialmoleculecreationbuildingscost * 1.5;
+            artificialmoleculecreationbuildingsbutton.setAttribute("onclick", `buy(${artificialmoleculecreationbuildingscost}, "Artificial Molecule Creation Building")`);
+          }
+       else if (item === "JSunlock") {
+            let jsprompt = prompt('You can unlock this, however, in return, you will lose everything else you have earned. (type "Okay" for yes, and "No" for no).');
+            if (jsprompt = "Okay") {
+              youngminers = 0;
+              miners = 0;
+              brutes = 0;
+              managementteams = 0;
+              trainingprograms = 0;
+              heavymachines = 0;
+              batteringrams = 0;
+              factories = 0;
+              giantrobotminers = 0;
+              lapisradarsystems = 0;
+              machinedevelopmentteams = 0;
+              hydraulicrockbreakers = 0;
+              warptravelutilities = 0;
+              timemachines = 0;
+              artificialmoleculecreationbuildings = 0;
+              currency = 0;
+              clickvalue = 1;
+              JSunlocked = true;
+            }
+          }
+        }
+          if (item === "Javascript Console" && JSunlocked === true) {
+            alert("Using this powerful item is a risk, as without a good knowledge of javascript, you can easily break the game in a way where you may not be able to keep any progress.");
+            jsportopen();
+        }
+        if (item === "Javascript Console" && JSunlocked === false) {
+          alert("You must unlock js before this purchase can be made.");
+        }
+      }
+      function buy(cost, item) {
+        if (currency >= cost) {
+        currency -= cost;
+          if (currency > 1) {
+            currencydisplay.innerHTML = `${currency} Lapis Lazuli Stones`;
+          }
+          else if (currency === 0) {
+            currencydisplay.innerHTML = "No Lapis Lazuli Stones";
+          }
+          else {
+            currencydisplay.innerHTML = "1 Lapis Lazuli Stone";
+          }
+          grant(item);
+        }
+        else {
+          alert("'beat it, kid.' says The Shopkeeper. 'you can't afford that yet!'");
+        }
+      }
+      //automatic mining variables
+      
+      function getRandom(min, max) {
+          return Math.round(Math.random() * (max - min) + min);
+      }
+      
+      function showshadow() {}
+      
+      function spawnlapisreserve() {
+        var x = getRandom(1, 1840);
+        var y = getRandom(1, 1000);
+        lapisreserveimg.style = `display: block; margin-top: ${y}; margin-left: ${x};`;
+      }
+      
+      let randoval = 0;
+      
+      randoval = getRandom(1, 30000000);
+        if (randoval === 15000000) {
+          alert('secret achievment unlocked: "luck demon."');
+        }
+      
+      randoval = getRandom(1, 300000000000000);
+        if (randoval === 1500000000000000) {
+          alert('congratgulations, you earned the secret achievement, "Luck Demon 2".');
+          alert('in earning this, you also earn luck demon.');
+          alert('prove this to be real by your own means');
+          showshadow();
+          alert("tell everyone you can and try to spread the word. it is so rare to have this achievment that you would probably faint if you knew the odds. what are the odds? 1 in 300 trillion, making you most likely the first.");
+        }
+      //automatic mining variables:--time config division
+      
+      
+      
+      
+      
+      
+      
+      
+      let callbackinterval = window.setInterval(CentralGameLoopCallback, 1000); // run game loop once per second
+      let currencyupdateinterval = window.setInterval(SetValueDisplay, 1); //update display as fast as possible
+      
+      
+      //endsection
+      let twicemousepowercost = 200;
+      let a = document.getElementById("1");
+      let b = document.getElementById("2");
+      let c = document.getElementById("3");
+      let d = document.getElementById("4");
+      let e = document.getElementById("5");
+      let f = document.getElementById("6");
+      let g = document.getElementById("7");
+      let h = document.getElementById("8");
+      let i = document.getElementById("9");
+      let j = document.getElementById("10");
+      let k = document.getElementById("11");
+      let l = document.getElementById("12");
+      let m = document.getElementById("13");
+      let n = document.getElementById("14");
+      let o = document.getElementById("15");
+      let p = document.getElementById("16");
+      
+      function doublemousepower() {
+        if (currency >= twicemousepowercost) {
+        currency -= twicemousepowercost;
+          if (currency > 1) {
+            currencydisplay.innerHTML = `${currency} Lapis Lazuli Stones`;
+          }
+          else if (currency === 0) {
+            currencydisplay.innerHTML = "No Lapis Lazuli Stones";
+          }
+          else {
+            currencydisplay.innerHTML = "1 Lapis Lazuli Stone";
+          }
+          clickvalue = clickvalue * 2;
+          twicemousepowercost = twicemousepowercost * 5;
+        }
+        else {
+          alert("'beat it!!!!!' says The Shopkeeper. 'you can't afford that yet!!!!'");
+        }
+        
+      }
+      
+      function CentralGameLoopCallback() {
+        currency += (youngminers * 5);
+        currency += (miners * 150);
+        currency += (brutes * 30000);
+        currency += (managementteams * 1500000);
+        currency += (trainingprograms * 1100009095);
+        currency += (heavymachines * 9000000000);
+        currency += (batteringrams * 90000000000);
+        currency += (factories * 190000000000);
+        currency += (giantrobotminers * 1090000000000);
+        currency += (lapisradarsystems * 2180000000000);
+        currency += (machinedevelopmentteams * 3270000000000);
+        currency += (hydraulicrockbreakers * 4000000000000);
+        currency += (warptravelutilities * 9000000000000);
+        currency += (timemachines * 10000000000000);
+        currency += (artificialmoleculecreationbuildings * 500000000000000);        
+        if (currency >= 10000) {
+          a.innerHTML = "Miner";
+        }
+        if (currency >= 150000) {
+          b.innerHTML = "Brute"
+        }
+        if (currency >= 5500000) {
+          c.innerHTML = "Management Team";
+        }
+        if (currency >= 4500000000) {
+          d.innerHTML = "Training Program";
+        }
+        if (currency >= 8000000000) {
+          e.innerHTML = "Heavy Machine";
+        }
+        if (currency >= 100000000000) {
+          f.innerHTML = "Battering Ram";
+        }
+        if (currency >= 8700000000000) {
+          g.innerHTML = "Factory";
+        }
+        if (currency >= 20000000000000) {
+          h.innerHTML = "Giant Robot Miner";
+        }
+        if (currency >= 30000000000000) {
+          i.innerHTML = "Lapis Radar System";
+        }
+        if (currency >= 50000000000000) {
+          j.innerHTML = "Machine Development Team";
+        }
+        if (currency >= 70000000000000) {
+          k.innerHTML = "Hydraulic Rock Breaker";
+        }
+        if (currency >= 88888888888800) {
+          l.innerHTML = "Futuristic Technology Unlock";
+        }
+        if (currency >= 117004750000000) {
+          m.innerHTML = "Warp Travel Port";
+        }
+        if (currency >= 2300000000000000) {
+          n.innerHTML = "Time Machine";
+        }
+        if (currency >= 5000000000000000) {
+          o.innerHTML = "Artificial Molecule Creation Building";
+        }
+        if (currency >= 8900009765089500) {
+          p.innerHTML = "Javascript Console";
+        }
+        localStorage.setItem("currency", currency);
+        localStorage.setItem("clickvalue", clickvalue);
+        localStorage.setItem("YM", youngminers);
+        localStorage.setItem("M", miners);
+        localStorage.setItem("B", brutes);
+        localStorage.setItem("MT", managementteams);
+        localStorage.setItem("TP", trainingprograms);
+        localStorage.setItem("HM", heavymachines);
+        localStorage.setItem("BR", batteringrams);
+        localStorage.setItem("F", factories);
+        localStorage.setItem("GRM", giantrobotminers);
+        localStorage.setItem("LRS", lapisradarsystems);
+        localStorage.setItem("MDT", machinedevelopmentteams);
+        localStorage.setItem("HRB", hydraulicrockbreakers);
+        localStorage.setItem("WTU", warptravelutilities);
+        localStorage.setItem("TM", timemachines);
+        localStorage.setItem("ACMB", artificialmoleculecreationbuildings);
+        localStorage.setItem("JCB", jsconsolebought);
+        randoval = getRandom(1, 5000000);
+        if (randoval === 500000) {
+          alert("shadow achievment unlocked: Just plain lucky");
+        }
+      }
+      function SetValueDisplay() {
+        if (currency > 1) {
+          currencydisplay.innerHTML = `${currency} Lapis Lazuli Stones`;
+        }
+        if (currency === 1) {
+          currencydisplay.innerHTML = "1 Lapis Lazuli Stone";
+        }
+        if (currency === 0) {
+          currencydisplay.innerHTML = "No Lapis Lazuli Stones";
+        }
+      }
+    </script>
+  </body>
+</html>
