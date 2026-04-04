@@ -378,7 +378,6 @@ window.addEventListener('contextmenu', (event) => {
       
       let currency = 0; 
       
-        
       
       
       let clickvalue = 1;
@@ -453,7 +452,7 @@ document.addEventListener('keydown', function(e) {
 if (e.key === "p" || e.key === "P") {
 audio.play();
 }
-if (key === " ") {
+if (e.key === " ") {
   currency += clickvalue;
 }
 });
