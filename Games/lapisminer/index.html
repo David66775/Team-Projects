@@ -370,7 +370,7 @@ window.addEventListener('contextmenu', (event) => {
          hydraulicrockbreakers = localStorage.getItem("HRB");
          warptravelutilities = localStorage.getItem("WTU");
          timemachines = localStorage.getItem("TM");
-         artificialmoleculecreationbuildings = localStorage.getItem("AMCB");
+         artificialmoleculecreationbuildings = localStorage.getItem("ACMB");
          jsconsolebought = localStorage.getItem("JCB");
         if (jsconsolebought) {
           jsportopen();
@@ -649,7 +649,7 @@ document.addEventListener('keyreleased', function(e) {
         localStorage.setItem("TM", timemachines);
         localStorage.setItem("ACMB", artificialmoleculecreationbuildings);
         localStorage.setItem("JCB", jsconsolebought);
-      }
+      };
       
       //endsection
       let twicemousepowercost = 200;
@@ -683,7 +683,7 @@ document.addEventListener('keyreleased', function(e) {
             currencydisplay.innerHTML = "1 Lapis Lazuli Stone";
           }
           clickvalue = clickvalue * 2;
-          twicemousepowercost = twicemousepowercost * 5;
+          twicemousepowercost = twicemousepowercost * 2.6;
         }
         else {
           alert("'beat it!!!!!' says The Shopkeeper. 'you can't afford that yet!!!!'");
