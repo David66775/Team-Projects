@@ -455,8 +455,10 @@ audio.play();
 }
 });
 document.addEventListener('keyreleased', function(e) {
-
+if (e.key === " ") {
+  currency += clickvalue;
 }
+});
       function grant(item) {
         if (item === "Young Miner") {
           youngminers++;
