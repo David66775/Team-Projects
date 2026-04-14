@@ -13,19 +13,10 @@
   </head>
   <body>
     <textarea placeholder = "name\n\ndata\n\n Please Do Not Edit" id = "a"></textarea>
+    <p>Project Descripion: testing getting raw js object data from a .json file.</p>
     <script>
       let x = document.getElementById("a");
-      fetch('/Team-Projects/Testing/A1steaksauce.json')
-  .then(response => response.json())
-  .then(data => {
-    a.innerhtml = (data.main.name);
-  })
-  fetch('/Team-Projects/Testing/A1steaksauce.json')
-  .then(response => response.json())
-  .then(data => {
-    a.innerhtml += (data.main.data);
-  })
-  .catch(error => console.error('Error:', error));
+      
     </script>
   </body>
 </html>
