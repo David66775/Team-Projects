@@ -20,6 +20,11 @@
   .then(data => {
     a.innerhtml = (data.main.name);
   })
+  fetch('/Team-Projects/Testing/A1steaksauce.json')
+  .then(response => response.json())
+  .then(data => {
+    a.innerhtml += (data.main.data);
+  })
   .catch(error => console.error('Error:', error));
     </script>
   </body>
