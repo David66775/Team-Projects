@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "Utf-8">
+    <title>A1steaksauce Testing Room</title>
+
+    <style>
+      textarea {
+        width: 99%;
+        height: 150px;
+      }
+    </style>
+  </head>
+  <body>
+    <textarea placeholder = "name\n\ndata\n\n Please Do Not Edit" id = "a"></textarea>
+    <script>
+      let x = document.getElementById("a");
+      fetch('/Team-Projects/Testing/A1steaksauce.json')
+  .then(response => response.json())
+  .then(data => {
+    a.innerhtml = (data.main.name);
+  })
+  .catch(error => console.error('Error:', error));
+    </script>
+  </body>
+</html>
