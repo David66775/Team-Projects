@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset = "Utf-8">
+    <title>Cellfont testing area</title>
+
+    <style>
+      * {
+        background-color: black;
+        margin: 0px;
+        padding: 0px;
+        border: none;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id = "C"></canvas>
+    <script>
+      const canvas = docuemnt.getElementById("C");
+      const ctx = canvas.getContext("2d");
+      const fontimg = new Image();
+      fontimg.onload = function() {
+        let interval = window.setInterval(render, 17);
+      }
+      fontimg.src = "/Team-Projects/assets/Images/charmap-cellphone_white.png/"
+      function render() {
+        ctx.drawImage(fontimg, 0, 0, 64, 64, 30, 30, 64, 64);
+      }
+    </script>
+  </body>
+</html>
