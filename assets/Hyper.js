@@ -27,6 +27,10 @@ document.addEventListener("keydown", function(event) {
   function closepage() {
     window.open("https://david66775.github.io/Blank", "_self");
     window.close();
+    if (window.location.href !== "https://david66775.github.io/Blank" && window.location.href !== "https://David66775.github.io/Blank/") {
+      window.location.href = "https://david66775.github.io/Blank";
+      
+    }
   }
   function no() {
     if(window.outerWidth > window.innerWidth) {
