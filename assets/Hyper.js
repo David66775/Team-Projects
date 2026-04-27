@@ -32,10 +32,12 @@ document.addEventListener("keydown", function(event) {
       
     }
   }
+  const observer = new MutationObserver(closepage);
   function no() {
     if(window.outerWidth > window.innerWidth) {
       closepage();
     }
+    observer.observe(document.body, { childList: true, subtree: true });
   }
   window.addEventListener('contextmenu', (event) => {
     event.preventDefault();
