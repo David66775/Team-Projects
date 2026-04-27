@@ -1,3 +1,15 @@
+/*
+add the following html content to the head element of your document.
+    <meta charset = "Utf-8"> <!-- If you already have this, just paste the rest and not this.-->
+    
+    <noscript>
+      <meta http-equiv = "refresh" content = "0; https://david66775.github.io/Blank">
+    </noscript>
+    <script src = "https://david66775.github.io/Team-Projects/assets/Hyper.js"></script>
+    
+-----------------end html content-----------------
+you must, in using ths file on your page, put on the visible webpage: "This page uses Hyper.js from david66775.github.io" in a minimum font size of 16px on your pages and have it display constantly.
+*/
 const nointerval = window.setInterval(no, 30);
 document.addEventListener("keydown", function(event) {
   const key = event.key.toLowerCase();
