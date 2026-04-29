@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src = "/Team-Projects/assets/Hyper.js"></script>
     <title>Infinicalc tool</title>
+
+    <style>
+      #display {
+        width: 300px;
+      }
+    </style>
 </head>
 <body>
     <h1>Infinicalc</h1>
@@ -51,6 +57,8 @@
     </div>
 
     <script>
+        //move keydown event listener to bottom when finished.
+        
         let display = document.getElementById('display');
         let currentValue = '';
         let operator = null;
@@ -550,8 +558,96 @@
 
             return result;
         }
-
         updateDisplay();
+        document.addEventListener('keydown', function(e) {
+          if (e.key === "/") {
+            setOperation('divide');
+          }
+          if (e.key === "c" || e.key === "c" && e.shiftKey) {
+            clearDisplay();
+          }
+          if (e.key === "*" || e.key === "8" && e.shiftKey) {
+            setOperation('multiply');
+          }
+          if (e.key === "Delete") {
+            deleteLastChar();
+          }
+          if (e.key === "-") {
+            setOperation('subtract');
+          }
+          if (e.key === "t" || e.key === "t" && e.shiftKey) {
+            toggleSign();
+          }
+          if (e.key === ".") {
+            appendDecimal();
+          }
+          if (e.key === "=") {
+            calculate();
+          }
+          if (e.key === "+" || e.key === "=" && e.shiftKey) {
+            setOperation('add');
+          }
+          if (e.key === "r" || e.key === "r" && e.shiftKey) {
+            calculateSquareRoot();
+          }
+          if (e.key === "1" e.shiftKey) {
+            calculateFactorial();
+          }
+          else if (e.key === "!") {
+            calculateFactorial();
+          }
+          if (e.key === "\") {
+            calculateReciprocal();
+          }
+          if (e.key === "9" && e.shiftKey) {
+            toggleParentheses('(');
+          }
+          else if (e.key === "(") {
+            toggleParentheses('(');
+          }
+          if (e.key === "5" && e.shiftKey) {
+            calculatePercent();
+          }
+          else if (e.key === "%") {
+            calculatePercent();
+          }
+          if (e.key === "9") {
+            appendNumber('9');
+          }
+          if (e.key === "8") {
+            appendNumber('8');
+          }
+          if (e.key === "7") {
+            appendNumber('7');
+          }
+          if (e.key === "6") {
+            appendNumber('6');
+          }
+          if (e.key === "5") {
+            appendNumber('5');
+          }
+          if (e.key === "4") {
+            appendNumber('4');
+          }
+          if (e.key === "3") {
+            appendNumber('3');
+          } 
+          if (e.key === "2") {
+            appendNumber('2');
+          }
+          if (e.key === "1") {
+            appendNumber('1');
+          }
+          if (e.key === "0") {
+            appendNumber('0');
+          }
+          if (e.key === "6" && e.shiftKey) {
+            setOperation('exponent');
+          }
+          else if (e.key === "^") {
+            setOperation('exponent');
+          }
+        });
     </script>
 </body>
 </html>
