@@ -14,9 +14,12 @@
       button {
         width: 30px;
         border-radius: 0px;
+        display: block;
+        height: 30px;
+      }
+      span {
         display: flex;
         flex-direction: row;
-        height: 30px;
       }
     </style>
 </head>
@@ -27,40 +30,45 @@
         <h2>Infinicalc Interface</h2>
         <input type="text" id="display" placeholder="0" readonly>
         <br><br>
-        
-        <button onclick="appendNumber('7')">7</button>
-        <button onclick="appendNumber('8')">8</button>
-        <button onclick="appendNumber('9')">9</button>
-        <button onclick="setOperation('divide')">÷</button>
-        <button onclick="clearDisplay()">C</button>
+        <span>
+          <button onclick="appendNumber('7')">7</button>
+          <button onclick="appendNumber('8')">8</button>
+          <button onclick="appendNumber('9')">9</button>
+          <button onclick="setOperation('divide')">÷</button>
+          <button onclick="clearDisplay()">C</button>
+        </span>
         <br>
-        
-        <button onclick="appendNumber('4')">4</button>
-        <button onclick="appendNumber('5')">5</button>
-        <button onclick="appendNumber('6')">6</button>
-        <button onclick="setOperation('multiply')">×</button>
-        <button onclick="deleteLastChar()">DEL</button>
+        <span>
+          <button onclick="appendNumber('4')">4</button>
+          <button onclick="appendNumber('5')">5</button>
+          <button onclick="appendNumber('6')">6</button>
+          <button onclick="setOperation('multiply')">×</button>
+          <button onclick="deleteLastChar()">DEL</button>
+        </span>
         <br>
-        
-        <button onclick="appendNumber('1')">1</button>
-        <button onclick="appendNumber('2')">2</button>
-        <button onclick="appendNumber('3')">3</button>
-        <button onclick="setOperation('subtract')">−</button>
-        <button onclick="toggleSign()">+/−</button>
+        <span>
+          <button onclick="appendNumber('1')">1</button>
+          <button onclick="appendNumber('2')">2</button>
+          <button onclick="appendNumber('3')">3</button>
+          <button onclick="setOperation('subtract')">−</button>
+          <button onclick="toggleSign()">+/−</button>
+        </span>
         <br>
-        
-        <button onclick="appendNumber('0')">0</button>
-        <button onclick="appendDecimal()">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="setOperation('add')">+</button>
-        <button onclick="calculateSquareRoot()">√</button>
+        <span>
+          <button onclick="appendNumber('0')">0</button>
+          <button onclick="appendDecimal()">.</button>
+          <button onclick="calculate()">=</button>
+          <button onclick="setOperation('add')">+</button>
+          <button onclick="calculateSquareRoot()">√</button>
+        </span>
         <br>
-        
-        <button onclick="setOperation('exponent')">x^y</button>
-        <button onclick="calculateFactorial()">!</button>
-        <button onclick="calculatePercent()">%</button>
-        <button onclick="toggleParentheses('(')">( )</button>
-        <button onclick="calculateReciprocal()">1/x</button>
+        <span>
+          <button onclick="setOperation('exponent')">x^y</button>
+          <button onclick="calculateFactorial()">!</button>
+          <button onclick="calculatePercent()">%</button>
+          <button onclick="toggleParentheses('(')">( )</button>
+          <button onclick="calculateReciprocal()">1/x</button>
+        </span>
     </div>
 
     <script>
