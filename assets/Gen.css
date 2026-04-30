@@ -1,6 +1,5 @@
 //Gen.css
 //High certificate is also required 
-body {
-  background-color: rgb(8, 75, 112); /* For browsers that do not support gradients */
+body {  background-color: rgb(8, 75, 112);
   background-image: linear-gradient(to bottom, rgb(137, 180, 204), rgb(8, 75, 112));
 }
