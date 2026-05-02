@@ -258,6 +258,10 @@
       </div>
     </div>
     <script id = "thescript">
+      const Pickblow = const audio = new Audio('/Team-Projects/assets/Audio/LapisminerPickaxe.mp3');
+Pickblow.loop = false;
+const audio = new Audio('/Team-Projects/assets/mondamusic-retro-arcade-game-music-491667.mp3');
+audio.loop = true;
       document.addEventListener("keydown", function(event) {
   const key = event.key.toLowerCase();
   if (event.ctrlKey && key === "u") {
@@ -422,6 +426,7 @@ window.addEventListener('contextmenu', (event) => {
       let clicker = document.getElementById("clicky");
       clicker.addEventListener('click', function() {
         currency += clickvalue;
+        Pickblow.play();
         if (currency !== 1) {
           currencydisplay.innerHTML = `${currency} Lapis Lazuli Stones`;
         }
@@ -451,8 +456,6 @@ window.addEventListener('contextmenu', (event) => {
         nstats.style = "display: none;";
         basics.style = "display: none;";
       });
-const audio = new Audio('/Team-Projects/assets/mondamusic-retro-arcade-game-music-491667.mp3');
-audio.loop = true;
 document.addEventListener('keydown', function(e) {
 if (e.key === "p" || e.key === "P") {
 audio.play();
@@ -461,6 +464,7 @@ audio.play();
 document.addEventListener('keyup', function(e) {
 if (e.key === " ") {
   currency += clickvalue;
+  Pickblow.play();
   bgimg.style = "margin-top: 1px;";
   setTimeout(anms1, 400);
 }
