@@ -18,7 +18,7 @@ Permission is hereby granted to use, copy, modify, and distribute this software 
    - Any other publicly accessible use case
 
 4. **Prohibited Uses**:
-   - Private, personal use
+   - Financial gain
    - Commercial use without explicit written permission
    - Proprietary software integration
    - Any use where the software is not accessible to the general public
@@ -42,4 +42,4 @@ Permission is hereby granted to use, copy, modify, and distribute this software 
 Violations of this license will be enforced to the fullest extent permitted by law.
 
 ---
-**Last Updated**: April 29, 2026
+**Last Updated**: May 2, 2026
