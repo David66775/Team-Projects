@@ -8,7 +8,7 @@ Permission is hereby granted to use, copy, modify, and distribute this software 
 
 1. **Attribution Requirement**: Any use, distribution, or derivative work of this software must include clear and conspicuous attribution to the original repository: https://github.com/David66775/Team-Projects/tree/main/infinicalc
 
-2. **Public Use Only**: This software may only be used for public, non-commercial purposes. Private use is strictly prohibited.
+2. **Public Use Only**: This software may only be used for public, personal, and non-commercial purposes. Private use is strictly prohibited.
 
 3. **Permitted Uses**:
    - Educational purposes (schools, universities, etc.)
