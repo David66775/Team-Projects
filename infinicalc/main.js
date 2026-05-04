@@ -482,9 +482,6 @@ let display = document.getElementById('display');
             }
 
             const numInt = parseInt(num);
-            if (isNaN(numInt) || numInt > 100) {
-                return 'Error: Hit factorial limit. This will be removed in the future.';
-            }
 
             if (numInt === 0 || numInt === 1) {
                 return '1';
